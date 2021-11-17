@@ -132,18 +132,12 @@ You will have to supply the aws-sdk client as first argument and the bucket/key 
 as second argument to the function `parquetReader.openS3`.
 
 ``` js
-const AWS = require('aws-sdk');
-const client = new AWS.S3({
-  accessKeyId: 'xxxxxxxxxxx',
-  secretAccessKey: 'xxxxxxxxxxx'
-});
-
-const params = {
-  Bucket: 'xxxxxxxxxxx',
-  Key: 'xxxxxxxxxxx'
-};
-
-let reader = await parquet.ParquetReader.openS3(client,params);
+const { S3Client, HeadObjectCommand, GetObjectCommand } = require('@aws-sdk/client-s3')
+const client = new S3Client({ region:"us-east-1" })
+let reader = await parquet.ParquetReader.openS3(
+  { S3Client: client, HeadObjectCommand, GetObjectCommand },
+  params
+)
 ```
 
 ### Reading data from a buffer
