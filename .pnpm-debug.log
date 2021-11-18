@@ -1,0 +1,15 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS",
+    "hint": "Available dependencies: chai, mocha, brotli, bson, int53, object-stream, snappyjs, thrift, varint",
+    "err": {
+      "name": "Error",
+      "message": "Cannot remove 'parquetjs': no such dependency found",
+      "code": "ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS",
+      "stack": "Error: Cannot remove 'parquetjs': no such dependency found\n    at Object.handler (/Users/anthonypluth/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:116492:15)\n    at async Timeout._onTimeout (/Users/anthonypluth/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:124590:24)"
+    }
+  }
+}
